@@ -2,6 +2,14 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelectorAll('.site-nav a');
 const hero = document.querySelector('.hero');
+const auditForm = document.querySelector('#audit-form');
+const auditSubmit = document.querySelector('#audit-submit');
+const auditSuccess = document.querySelector('#audit-success');
+const auditError = document.querySelector('#audit-error');
+const auditNameInput = document.querySelector('#audit-name');
+const auditTelegramInput = document.querySelector('#audit-telegram');
+const auditNameError = document.querySelector('#audit-name-error');
+const auditTelegramError = document.querySelector('#audit-telegram-error');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const onScrollHeader = () => {
@@ -118,6 +126,86 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => sectionObserver.observe(section));
+
+const clearFieldError = (input, errorElement) => {
+  if (!input) return;
+  const field = input.closest('.form-field');
+  field?.classList.remove('is-invalid');
+  if (errorElement) errorElement.textContent = '';
+};
+
+const setFieldError = (input, errorElement, message) => {
+  if (!input) return;
+  const field = input.closest('.form-field');
+  field?.classList.add('is-invalid');
+  if (errorElement) errorElement.textContent = message;
+};
+
+if (auditForm) {
+  const submitDefaultText = auditSubmit?.textContent || 'Получить аудит';
+
+  const validateAuditForm = () => {
+    let isValid = true;
+    clearFieldError(auditNameInput, auditNameError);
+    clearFieldError(auditTelegramInput, auditTelegramError);
+
+    const nameValue = auditNameInput?.value.trim() || '';
+    const telegramValue = auditTelegramInput?.value.trim() || '';
+
+    if (!nameValue) {
+      setFieldError(auditNameInput, auditNameError, 'Введите имя');
+      isValid = false;
+    }
+
+    if (!telegramValue) {
+      setFieldError(auditTelegramInput, auditTelegramError, 'Укажите Telegram');
+      isValid = false;
+    }
+
+    return isValid;
+  };
+
+  auditNameInput?.addEventListener('input', () => clearFieldError(auditNameInput, auditNameError));
+  auditTelegramInput?.addEventListener('input', () => clearFieldError(auditTelegramInput, auditTelegramError));
+
+  auditForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (auditSuccess) auditSuccess.hidden = true;
+    if (auditError) auditError.hidden = true;
+
+    if (!validateAuditForm()) return;
+
+    if (auditSubmit) {
+      auditSubmit.disabled = true;
+      auditSubmit.textContent = 'Отправка...';
+    }
+
+    try {
+      const formData = new FormData(auditForm);
+      const response = await fetch(auditForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (!response.ok) throw new Error('Formspree request failed');
+
+      auditForm.reset();
+      clearFieldError(auditNameInput, auditNameError);
+      clearFieldError(auditTelegramInput, auditTelegramError);
+      if (auditSuccess) auditSuccess.hidden = false;
+    } catch (error) {
+      if (auditError) auditError.hidden = false;
+    } finally {
+      if (auditSubmit) {
+        auditSubmit.disabled = false;
+        auditSubmit.textContent = submitDefaultText;
+      }
+    }
+  });
+}
 
 if (hero && !prefersReducedMotion) {
   let rafId = null;

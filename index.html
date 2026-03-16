@@ -328,6 +328,32 @@
             Получите понятный управленческий разбор без ручной аналитики и примите решения,
             которые усиливают бизнес уже в ближайшие дни.
           </p>
+          <form class="audit-form reveal reveal-up" id="audit-form" action="https://formspree.io/f/mayvlkpb" method="POST" novalidate>
+            <div class="form-grid">
+              <label class="form-field">
+                <span>Имя</span>
+                <input type="text" name="name" id="audit-name" autocomplete="name" required placeholder="Ваше имя">
+                <small class="field-error" id="audit-name-error"></small>
+              </label>
+              <label class="form-field">
+                <span>Telegram</span>
+                <input type="text" name="telegram" id="audit-telegram" autocomplete="off" required placeholder="@username или ссылка">
+                <small class="field-error" id="audit-telegram-error"></small>
+              </label>
+              <label class="form-field form-field-wide">
+                <span>Ссылка на кабинет WB или артикул товара</span>
+                <input type="text" name="wb_reference" id="audit-wb-reference" autocomplete="off" placeholder="https://... или WB-12345">
+              </label>
+            </div>
+            <button class="btn btn-primary btn-xl audit-submit" type="submit" id="audit-submit">Получить аудит</button>
+            <p class="privacy-note">Мы не передаем данные третьим лицам</p>
+            <div class="audit-success" id="audit-success" role="status" aria-live="polite" hidden>
+              <p>Заявка отправлена.<br>Мы свяжемся с вами в Telegram.</p>
+            </div>
+            <div class="audit-error" id="audit-error" role="alert" aria-live="polite" hidden>
+              <p>Не удалось отправить заявку. Попробуйте еще раз.</p>
+            </div>
+          </form>
           <a class="btn btn-primary btn-xl" href="#top">Получить бесплатный аудит</a>
         </div>
       </div>
