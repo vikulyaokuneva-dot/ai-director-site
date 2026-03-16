@@ -1,0 +1,355 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ИИ-Директор WB — premium AI-аналитика для продавцов Wildberries: прибыль, SKU, реклама, рекомендации и точки роста в одном управленческом отчете.">
+  <title>ИИ-Директор WB — AI-аналитика кабинета Wildberries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-backdrop" aria-hidden="true">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+    <div class="mesh"></div>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#hero" aria-label="На главный экран">
+        <span class="logo-dot"></span>
+        <span>ИИ-Директор WB</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="#problem">Проблемы</a>
+        <a href="#features">Возможности</a>
+        <a href="#demo">Демо-отчет</a>
+        <a href="#how">Как это работает</a>
+        <a href="#cta">Контакт</a>
+      </nav>
+
+      <a class="btn btn-sm btn-primary header-cta" href="#cta">Бесплатный аудит</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal reveal-up">
+          <p class="badge">AI-аудит для продавцов Wildberries</p>
+          <h1>Видите реальную прибыль по WB и управляете ростом на цифрах, а не на интуиции</h1>
+          <p class="hero-subtitle">
+            ИИ-Директор WB собирает финансы, SKU и рекламу в единый управленческий контур. Вы сразу понимаете,
+            где деньги, где потери и какие действия дадут прирост уже сегодня.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#cta">Получить бесплатный аудит</a>
+            <a class="btn btn-ghost" href="#features">Посмотреть возможности</a>
+          </div>
+          <div class="hero-metrics">
+            <article>
+              <h3>+2.4ч</h3>
+              <p>экономия времени в день</p>
+            </article>
+            <article>
+              <h3>24/7</h3>
+              <p>контроль ключевых KPI</p>
+            </article>
+            <article>
+              <h3>1 отчёт</h3>
+              <p>вместо десятков таблиц</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-fade">
+          <div class="dashboard-shell">
+            <div class="shell-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <p>Управленческий обзор</p>
+            </div>
+            <div class="kpi-grid">
+              <article>
+                <p>Чистая прибыль</p>
+                <h3>₽ 318 420</h3>
+                <span class="pos">+12.6% к вчера</span>
+              </article>
+              <article>
+                <p>Выручка</p>
+                <h3>₽ 1 942 870</h3>
+                <span class="pos">+8.2% неделя</span>
+              </article>
+              <article>
+                <p>Реклама</p>
+                <h3>₽ 241 300</h3>
+                <span class="warn">ACoS 13.4%</span>
+              </article>
+              <article>
+                <p>Маржинальность</p>
+                <h3>16.4%</h3>
+                <span class="pos">в целевом коридоре</span>
+              </article>
+            </div>
+            <div class="sku-columns">
+              <div>
+                <h4>Сильные SKU</h4>
+                <p>WB-4561, WB-2298, WB-1187</p>
+              </div>
+              <div>
+                <h4>Слабые SKU</h4>
+                <p>WB-9540, WB-3402</p>
+              </div>
+            </div>
+            <div class="ai-note">
+              <p>AI-вывод</p>
+              <h4>Смещение бюджета с WB-9540 на WB-4561 увеличит чистую прибыль до +7.3% за 7 дней.</h4>
+            </div>
+          </div>
+
+          <div class="floating-chip chip-a">Точка роста: +₽72 000 / 30 дней</div>
+          <div class="floating-chip chip-b">SKU WB-4561: лидер по вкладу в прибыль</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head reveal reveal-up">
+          <p class="eyebrow">Проблема</p>
+          <h2>Большинство продавцов WB управляют бизнесом вслепую</h2>
+          <p>Оборот есть, но где реальная прибыль и что именно тормозит рост, обычно не видно.</p>
+        </div>
+        <div class="problem-grid">
+          <article class="glass-card reveal reveal-up">
+            <h3>Прибыль неочевидна</h3>
+            <p>Сложно быстро понять, сколько бизнес реально зарабатывает после всех расходов.</p>
+          </article>
+          <article class="glass-card reveal reveal-up" style="--delay: 0.05s;">
+            <h3>SKU без прозрачности</h3>
+            <p>Неясно, какие позиции дают деньги, а какие съедают маржу и оборотный капитал.</p>
+          </article>
+          <article class="glass-card reveal reveal-up" style="--delay: 0.1s;">
+            <h3>Реклама под вопросом</h3>
+            <p>Бюджет расходуется ежедневно, но итоговая эффективность часто остается неочевидной.</p>
+          </article>
+          <article class="glass-card reveal reveal-up" style="--delay: 0.15s;">
+            <h3>Ручная рутина</h3>
+            <p>Данные приходится собирать вручную из разных отчетов, теряя время и точность.</p>
+          </article>
+          <article class="glass-card reveal reveal-up" style="--delay: 0.2s;">
+            <h3>Решения на ощущениях</h3>
+            <p>Без целостной картины сложно принимать уверенные управленческие решения.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head reveal reveal-up">
+          <p class="eyebrow">Решение</p>
+          <h2>Единый AI-контур управления кабинетом Wildberries</h2>
+          <p>Финансы, SKU, реклама и рекомендации в системе, которая говорит с вами языком бизнеса.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal reveal-up">
+            <h3>Финансовый контур</h3>
+            <p>Выручка, прибыль, маржинальность и структура расходов в одном понятном разрезе.</p>
+          </article>
+          <article class="feature-card reveal reveal-up" style="--delay: 0.05s;">
+            <h3>Сильные и слабые SKU</h3>
+            <p>Определяем товары-драйверы и позиции, которые тормозят рост прибыли.</p>
+          </article>
+          <article class="feature-card reveal reveal-up" style="--delay: 0.1s;">
+            <h3>Контроль рекламы</h3>
+            <p>Отслеживаете расход, ACoS и влияние рекламных кампаний на итоговую прибыль.</p>
+          </article>
+          <article class="feature-card reveal reveal-up" style="--delay: 0.15s;">
+            <h3>AI-выводы</h3>
+            <p>Сервис формирует точные гипотезы и практические рекомендации на основе данных.</p>
+          </article>
+          <article class="feature-card reveal reveal-up" style="--delay: 0.2s;">
+            <h3>Управленческое резюме</h3>
+            <p>Каждый день получаете краткую картину состояния кабинета для быстрых решений.</p>
+          </article>
+          <article class="feature-card reveal reveal-up" style="--delay: 0.25s;">
+            <h3>Точки роста</h3>
+            <p>Видите, где именно лежит потенциал дополнительной прибыли и оборота.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="demo">
+      <div class="container">
+        <div class="section-head reveal reveal-up">
+          <p class="eyebrow">Демо-отчет</p>
+          <h2>Как выглядит результат работы ИИ-Директора WB</h2>
+          <p>Вместо разрозненных таблиц вы получаете управленческий интерфейс с четкими сигналами по бизнесу.</p>
+        </div>
+
+        <div class="report-ui reveal reveal-fade">
+          <div class="report-top">
+            <h3>Ежедневный управленческий отчет</h3>
+            <span>Обновлено: сегодня, 09:30</span>
+          </div>
+
+          <div class="report-kpis">
+            <article>
+              <p>Прибыль за день</p>
+              <h4>₽ 318 420</h4>
+              <small class="pos">+12.6%</small>
+            </article>
+            <article>
+              <p>Выручка</p>
+              <h4>₽ 1 942 870</h4>
+              <small class="pos">+8.2%</small>
+            </article>
+            <article>
+              <p>Статус рекламы</p>
+              <h4>Стабильно</h4>
+              <small class="neutral">ACoS 13.4%</small>
+            </article>
+          </div>
+
+          <div class="report-mid">
+            <div class="sku-box">
+              <h4>Сильные SKU</h4>
+              <ul>
+                <li><span>WB-4561</span><b>ROI 38%</b></li>
+                <li><span>WB-2298</span><b>ROI 31%</b></li>
+                <li><span>WB-1187</span><b>ROI 27%</b></li>
+              </ul>
+            </div>
+            <div class="sku-box danger">
+              <h4>Слабые SKU</h4>
+              <ul>
+                <li><span>WB-9540</span><b>маржа 4.1%</b></li>
+                <li><span>WB-3402</span><b>маржа 5.3%</b></li>
+                <li><span>WB-6620</span><b>маржа 5.8%</b></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="ai-panel">
+            <p>AI-вывод</p>
+            <h4>Текущий рост выручки частично съедается SKU с низкой маржей. Перераспределение 18% рекламного бюджета в пользу SKU-лидеров повысит чистую прибыль ориентировочно на 6-9% в течение недели.</h4>
+            <div class="recommendations">
+              <span>Снизить ставки на WB-9540</span>
+              <span>Усилить WB-4561 в рекламе</span>
+              <span>Пересчитать закуп WB-3402</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="container benefits-wrap">
+        <div class="benefits-intro reveal reveal-up">
+          <p class="eyebrow">Что вы получаете</p>
+          <h2>Ежедневную управленческую ясность по вашему кабинету WB</h2>
+          <p>Сервис снимает аналитическую рутину и переводит бизнес на режим точных решений.</p>
+        </div>
+        <div class="benefits-grid">
+          <article class="benefit-card reveal reveal-up">
+            <h3>Без ручной сборки цифр</h3>
+            <p>Данные собираются автоматически, а ключевые показатели уже структурированы.</p>
+          </article>
+          <article class="benefit-card reveal reveal-up" style="--delay: 0.05s;">
+            <h3>Контроль потерь прибыли</h3>
+            <p>Вы сразу видите, где бизнес теряет деньги и что нужно исправить в первую очередь.</p>
+          </article>
+          <article class="benefit-card reveal reveal-up" style="--delay: 0.1s;">
+            <h3>Фокус на сильных товарах</h3>
+            <p>Быстро находите SKU, которые стоит масштабировать и усиливать рекламой.</p>
+          </article>
+          <article class="benefit-card reveal reveal-up" style="--delay: 0.15s;">
+            <h3>Решения на фактах</h3>
+            <p>Каждое действие опирается на цифры, а не на ощущения и разрозненные отчеты.</p>
+          </article>
+          <article class="benefit-card reveal reveal-up" style="--delay: 0.2s;">
+            <h3>Понятная картина дня</h3>
+            <p>В начале дня вы уже знаете текущее состояние бизнеса и главные приоритеты.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head reveal reveal-up">
+          <p class="eyebrow">Как это работает</p>
+          <h2>От данных к конкретным решениям за 4 шага</h2>
+        </div>
+        <div class="steps">
+          <article class="step reveal reveal-up">
+            <span>01</span>
+            <h3>Загружаются данные</h3>
+            <p>Подтягиваются финансовые, товарные и рекламные показатели кабинета.</p>
+          </article>
+          <article class="step reveal reveal-up" style="--delay: 0.06s;">
+            <span>02</span>
+            <h3>AI-анализирует метрики</h3>
+            <p>Алгоритм выявляет закономерности, риски и точки роста по SKU и расходам.</p>
+          </article>
+          <article class="step reveal reveal-up" style="--delay: 0.12s;">
+            <span>03</span>
+            <h3>Формируется отчет</h3>
+            <p>Собирается управленческое резюме с ключевыми KPI и ясными сигналами.</p>
+          </article>
+          <article class="step reveal reveal-up" style="--delay: 0.18s;">
+            <span>04</span>
+            <h3>Вы получаете действия</h3>
+            <p>Готовые AI-рекомендации помогают быстро усилить прибыль и эффективность.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cta">
+      <div class="container">
+        <div class="final-cta reveal reveal-fade">
+          <p class="eyebrow">Бесплатный аудит кабинета Wildberries</p>
+          <h2>Узнайте, какие товары приносят прибыль, а какие тормозят рост</h2>
+          <p>
+            Получите понятный управленческий разбор без ручной аналитики и примите решения,
+            которые усиливают бизнес уже в ближайшие дни.
+          </p>
+          <a class="btn btn-primary btn-xl" href="#top">Получить бесплатный аудит</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="logo" href="#hero"><span class="logo-dot"></span><span>ИИ-Директор WB</span></a>
+        <p>AI-аналитика для продавцов Wildberries: прибыль, SKU, реклама и точки роста в едином отчете.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#problem">Проблемы</a>
+        <a href="#features">Возможности</a>
+        <a href="#demo">Демо-отчет</a>
+        <a href="#how">Как это работает</a>
+      </nav>
+      <a class="btn btn-sm btn-ghost" href="#cta">Связаться</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
